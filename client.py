@@ -18,6 +18,10 @@ def device_check():
 if __name__ == "__main__":
     import time
     import socket,os
+    
+    #check
+    print("you just get in Client.py")
+    
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     #use command line arguments to get port

@@ -1,0 +1,10 @@
+{
+	"Samsung Induction Cooker":
+		{
+		"Name": "Samsung Induction Cooker",
+		"Manufacturer":"Samsung",
+		"Manufacturing Date":"09/12",
+		"Service":["Boil", "Braise", "Deep-fry", "Preheat"],
+		"ip":"140.119.65.88"
+		}
+}

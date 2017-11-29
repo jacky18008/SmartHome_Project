@@ -18,29 +18,19 @@ def device_check():
 if __name__ == "__main__":
     import time
     import socket,os
-    
-    #check
-    print("you just get in Client.py")
-    
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     #use command line arguments to get port
     import argparse
 
     parser = argparse.ArgumentParser(description='Self management of smart home.')
-    parser.add_argument('ip', type=str, help='ip to the server.')
     parser.add_argument('port', type=str, help='port to the server.')
-    parser.add_argument('client_dir_path', type=str, help='dir_path of the client.')
-    parser.add_argument('server_dir_path', type=str, help='dir_path of the server.')
 
     #port = int(input("client port?"))
 
     #parse arguments
     args = parser.parse_args()
-    ip = args.ip
     port = int(args.port)
-    client_dir_path = args.client_dir_path
-    server_dir_path = args.server_dir_path
     
     #change work directory to client.
     os.chdir(client_dir_path)
@@ -109,7 +99,7 @@ if __name__ == "__main__":
         client_socket.send(device_situation.encode('UTF-8'))
         
     #change work directory back to server.
-    os.chdir(server_dir_path)
+    #os.chdir(server_dir_path)
 
 
         

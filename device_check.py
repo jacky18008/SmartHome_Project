@@ -1,3 +1,4 @@
+
 import numpy as np
 import time
 
@@ -9,6 +10,6 @@ if(work_normally < 7):
 else:
     print("encounter some error")
     print("working on some checking and recovering....")
-
+    
     with open("log.txt", "w") as fp:
         fp.write("error: "+str(time.time()) )

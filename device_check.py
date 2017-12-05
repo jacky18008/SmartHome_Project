@@ -11,4 +11,4 @@ else:
     print("working on some checking and recovering....")
 
     with open("log.txt", "w") as fp:
-        fp.write("error: "+time.time() )
+        fp.write("error: "+str(time.time()) )

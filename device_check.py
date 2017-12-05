@@ -1,6 +1,6 @@
-import np.random
+import numpy as np
 
-work_normally = np.random.randnt(0, 10)
+work_normally = np.random.randint(0, 10)
 
 if(work_normally < 7):
     print("work normally")

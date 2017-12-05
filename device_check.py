@@ -6,6 +6,7 @@ if(work_normally < 7):
     print("work normally")
 
 else:
-    print("work normally")
+    print("encounter some error")
+    print("working on some checking and recovering...")
 
 

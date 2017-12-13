@@ -5,6 +5,8 @@ import time
 work_normally = np.random.randint(0, 10)
 
 if(work_normally < 7):
+    with open("log"+str(time.time())+".txt", "w") as fp:
+        fp.write("right: "+str(time.time()) )
     print("work normally")
 
 else:

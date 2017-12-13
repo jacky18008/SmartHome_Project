@@ -14,5 +14,5 @@ else:
     %time
     time.sleep(10)
     
-    with open("log.txt", "w") as fp:
+    with open("log"+str(time.time())+".txt", "w") as fp:
         fp.write("error: "+str(time.time()) )

@@ -11,7 +11,6 @@ else:
     print("encounter some error")
     print("working on some checking and recovering...")
     
-    %time
     time.sleep(10)
     
     with open("log"+str(time.time())+".txt", "w") as fp:

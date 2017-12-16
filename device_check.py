@@ -5,6 +5,8 @@ import os
 
 parser = argparse.ArgumentParser(description='path')
 parser.add_argument('path', type=str)
+args = parser.parse_args()
+path = args.path
 #change current directories
 os.chdir(path)
 

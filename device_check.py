@@ -1,6 +1,12 @@
-
+import argparse
 import numpy as np
 import time
+import os
+
+parser = argparse.ArgumentParser(description='path')
+parser.add_argument('path', type=str)
+#change current directories
+os.chdir(path)
 
 work_normally = np.random.randint(0, 10)
 

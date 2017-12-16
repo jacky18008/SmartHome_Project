@@ -1,3 +1,4 @@
+import datetime
 import argparse
 import numpy as np
 import time
@@ -13,8 +14,6 @@ os.chdir(path)
 work_normally = np.random.randint(0, 10)
 
 if(work_normally < 7):
-    with open("log"+str(time.time())+".txt", "w") as fp:
-        fp.write("right: "+str(time.time()) )
     print("work normally")
 
 else:
@@ -23,5 +22,9 @@ else:
     
     time.sleep(10)
     
-    with open("log"+str(time.time())+".txt", "w") as fp:
-        fp.write("error: "+str(time.time()) )
+    # log the error message
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    with open("error_log_"+current_time+".txt", "w") as fp:
+        
+        fp.write("error: "+current_time )

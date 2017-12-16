@@ -11,7 +11,7 @@ path = args.path
 #change current directories
 os.chdir(path)
 
-log_dir = os.getcwd()+"error_logs"
+log_dir = os.path.join(os.getcwd(), "error_logs")
 #add log directory
 if not os.isdir(log_dir):
     os.mkdir(log_dir)

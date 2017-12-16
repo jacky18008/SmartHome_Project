@@ -11,6 +11,11 @@ path = args.path
 #change current directories
 os.chdir(path)
 
+log_dir = os.getcwd()+"error_logs"
+#add log directory
+if not os.isdir(log_dir):
+    os.mkdir(log_dir)
+
 work_normally = np.random.randint(0, 10)
 
 if(work_normally < 7):
@@ -25,6 +30,6 @@ else:
     # log the error message
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
-    with open("error_log_"+current_time+".txt", "w") as fp:
+    with open(os.path.join(log_dir, "error_log_"+current_time+".txt"), "w") as fp:
         
         fp.write("error: "+current_time )

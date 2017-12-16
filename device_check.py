@@ -20,7 +20,7 @@ else:
     print("encounter some error")
     print("working on some checking and recovering...")
     
-    time.sleep(10)
+    time.sleep(100)
     
     # log the error message
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
